@@ -1,0 +1,74 @@
+.sliderWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  top: -30px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gray;
+  cursor: pointer;
+
+  &.active {
+    background: orange;
+  }
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+
+  /* Прибираємо горизонтальний скролбар */
+  -ms-overflow-style: none; /* IE та старий Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+.slide {
+  flex: 0 0 40%;
+  background-size: cover;
+  background-position: center;
+  scroll-snap-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  transition: padding-bottom 0.3s ease;
+
+  &.overlay_active_slide {
+    padding-bottom: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  a {
+    margin-top: 10px;
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

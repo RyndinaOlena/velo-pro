@@ -1,0 +1,174 @@
+.header_background {
+  background-image: url("../../assets/images/desctophero.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+
+  &_title_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -10%);
+    color: white;
+    z-index: 1;
+    @media screen and (max-width: 1108px) {
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &_item {
+      font-size: 80px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      @media screen and (max-width: 768px) {
+        font-size: 50px;
+      }
+      @media screen and (max-width: 468px) {
+        font-size: 30px;
+      }
+    }
+    &_text {
+      font-size: 25px;
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 468px) {
+        font-size: 16px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+
+  &_language_container {
+    position: absolute;
+    top: 100%;
+    margin-top: 30px;
+    margin-left: 25px;
+
+    &_btn {
+      padding: 8px 8px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      color: white;
+
+      &.active {
+        color: #f57520;
+        outline: none;
+      }
+    }
+  }
+
+  &_logo {
+    width: 65px;
+    height: 35px;
+    margin-left: 30px;
+
+    @media screen and (max-width: 368px) {
+      width: 35px;
+      height: 20px;
+    }
+  }
+  &_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    &_nav_item {
+      font-size: 15px;
+      color: white;
+      margin-right: 10px;
+      text-transform: uppercase;
+      &:last-child {
+        margin-right: 0;
+      }
+      cursor: pointer;
+      @media screen and (max-width: 904px) {
+        font-size: 10px;
+      }
+    }
+  }
+  &_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    &_item {
+      margin: 0 15px;
+      font-size: 24px;
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+        margin: 0 10px;
+      }
+      @media screen and (max-width: 368px) {
+        font-size: 20px;
+        margin: 0 5px;
+      }
+    }
+  }
+  &_menu_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 20px;
+    cursor: pointer;
+    &_item {
+      width: 24px;
+      height: 2px;
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      &:first-child {
+        width: 30px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+.active {
+  color: #f57520;
+  outline: none;
+}
