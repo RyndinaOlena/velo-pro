@@ -1,40 +1,106 @@
 .catalog {
-  display: grid;
-  grid-template-rows: 300px auto; /* висота першого блоку + другий ряд */
-  gap: 20px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 15px;
+  gap: 30px;
 }
 
 /* верхній великий блок */
-.bigBlock {
+.big_block {
   background: orange;
-  border-radius: 12px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   font-size: 36px;
   font-weight: bold;
   color: white;
+  background-image: url('../../assets/images/catalog/8fe5936c2d84c2afd4559685fabac0f534440faf.png');
+  height: 300px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-/* контейнер нижніх блоків */
-.smallBlocks {
+.small_blocks {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 колонки */
-  grid-template-rows: 200px 200px; /* 2 рядки */
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
   gap: 20px;
-}
 
-/* стилізація окремих блоків */
-.block {
-  background: black;
-  border-radius: 12px;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  .small_blocks_item_first {
+    grid-row: span 2; /* займає два рядки */
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden; /* ховаємо зайве */
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* підганяємо під батька */
+    max-height: 300px;
+
+    img {
+      width: 100%;
+      height: 100%; /* 👈 займає всю висоту блока */
+      object-fit: cover; /* 👈 обрізає картинку */
+      object-position: top left; /* 👈 вирівнює по верхньому лівому кутку */
+      display: block;
+    }
+
+    h2 {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+      color: white;
+    }
+  }
+
+  &_item {
+    background-color: black;
+    border-radius: 8px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    justify-content: left;
+    height: 150px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      object-position: top left;
+    }
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &_item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
 }
