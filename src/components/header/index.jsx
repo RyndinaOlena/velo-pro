@@ -16,6 +16,7 @@ const changeLanguage = (lng) => {
   localStorage.setItem('language', lng);
 };
   return (
+    <div>
     <div className={styles.header_background}>
     <div className={styles.header_container}>
     <div className={styles.hero}>
@@ -63,6 +64,8 @@ const changeLanguage = (lng) => {
         <p className={styles.header_background_title_container_text}>{t('bicyclesText')}</p>
         <button className={styles.header_background_title_container_btn}>Подробнее</button>
         </div>
+   </div>
+   <Slider />
    </div>
   )
 }

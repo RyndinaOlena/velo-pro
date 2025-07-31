@@ -60,3 +60,11 @@ textarea:focus,
 select:focus {
   color: #f57520;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+.swiper-pagination {
+  bottom: 2px !important; /* зсунь на скільки треба */
+  top: auto !important;
+}

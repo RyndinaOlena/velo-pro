@@ -1,8 +1,14 @@
 import React from 'react'
+import ImageSlider from './slider-hero'
+import BikeGallery from './bike-gallery'
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <>
+    <ImageSlider />
+    <BikeGallery />
+    
+    </>
   )
 }
 

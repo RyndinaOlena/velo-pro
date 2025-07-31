@@ -1,0 +1,102 @@
+/// slider ///
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 80px;
+  padding: 5px;
+  scroll-behavior: smooth;
+
+  &_img_slider {
+    max-height: 40px;
+    max-width: 300px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+      max-height: 40px;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//// bikesData.js ///
+///
+.container {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &_gallery_title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  &_btn {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+}
+.bike_gallery {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.bike_card {
+  background-color: white;
+  &_flag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 44px;
+  }
+  &_img_velo {
+    max-width: 368px;
+    max-height: 271px;
+
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  &_name {
+    font-size: 20px;
+    margin: 10px 10px;
+    color: #333;
+  }
+  &_price {
+    font-size: 18px;
+    color: #e67e22;
+    margin: 10px 10px;
+  }
+  &_btn {
+    display: inline-block;
+    color: #333;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+.slider-container .swiper-button-prev,
+.slider-container .swiper-button-next {
+  display: none;
+}

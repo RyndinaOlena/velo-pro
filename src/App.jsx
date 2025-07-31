@@ -1,6 +1,6 @@
 import './App.css'
-import Header from './components/header'
-import Slider from './components/header/slider'
+import Header from './components/header'  
+import Catalog from './components/catalog'
 import Hero from './components/hero'
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Header />
-      <Slider />
       <Hero />
+      <Catalog />
     </>
   )
 }

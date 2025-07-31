@@ -3,9 +3,9 @@ import styles from "./slider.module.scss";
 
 export default function Slider() {
   const slides = [
-    { text: "Экстремальное вождение", bg: "/img/slide1.jpg" },
-    { text: "Велосипеды для профессионалов", bg: "/img/slide2.jpg" },
-    { text: "Прогулочные маршруты", bg: "/img/slide3.jpg" },
+    { text: "Экстремальное вождение", },
+    { text: "Велосипеды для профессионалов", },
+    { text: "Прогулочные маршруты", },
   ];
 
   const sliderRef = useRef(null);
@@ -46,8 +46,11 @@ export default function Slider() {
           i === current ? styles.overlay_active_slide : ""
         }`}
       >
-        <p>{slide.text}</p>
-        <a href="#">Подробнее</a>
+        <p className={styles.overlay_text}>{slide.text}</p>
+        {current === i && (
+               <a className={styles.overlay_item} href="#">Подробнее</a>
+        )}
+ 
       </div>
     </div>
   ))}
