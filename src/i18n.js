@@ -1,11 +1,11 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-import translationEn from "./locales/en/translation.json";
-import translationUk from "./locales/uk/translation.json";
+import translationEn from './locales/en/translation.json';
+import translationUk from './locales/uk/translation.json';
 
-const savedLanguage = localStorage.getItem("language") || "en";
+const savedLanguage = localStorage.getItem('language') || 'en';
 
 const resources = {
   en: { translation: translationEn },
@@ -13,12 +13,12 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // автоматичне виявлення мови браузера
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
     lng: savedLanguage,
-    fallbackLng: "en", // мова за замовчуванням
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },

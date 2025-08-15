@@ -7,7 +7,6 @@ const Hero = () => {
     <>
     <ImageSlider />
     <BikeGallery />
-    
     </>
   )
 }

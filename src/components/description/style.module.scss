@@ -7,7 +7,7 @@
 
 .description {
   width: 100%;
-  max-width: 1280px; // ограничиваем текстовый блок
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 15px;
   margin-top: 160px;
@@ -28,6 +28,9 @@
       font-weight: bold;
       font-size: 64px;
       line-height: 123%;
+      @media screen and (max-width: 768px) {
+        font-size: 36px;
+      }
     }
 
     &_text {
@@ -46,8 +49,12 @@
   width: 100%;
   margin-top: 40px;
   position: relative;
-  display: flex; // flex для центровки
+  display: flex;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    flex-direction: column;
+  }
 
   &_image {
     width: 100%;
@@ -67,12 +74,87 @@
     color: #fff;
     text-align: center;
     display: flex;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
 
+    &_title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 123%;
+      margin-bottom: 10px;
+    }
+
+    &_text {
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+
+    &_list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      &_el {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &_icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 16px;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
     &_list {
       max-width: 1280px;
       display: flex;
       justify-content: space-around;
+      margin: 0 auto;
       gap: 20px;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+      }
+      &_el {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+          align-items: flex-start;
+        }
+        &_item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 14px;
+          line-height: 150%;
+
+          &_icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+          }
+        }
+        &_text {
+          font-size: 14px;
+          text-align: left;
+          line-height: 150%;
+        }
+      }
     }
   }
 }

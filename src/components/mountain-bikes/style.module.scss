@@ -1,0 +1,75 @@
+.mountain_bikes_block {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+  
+  @media screen and (max-width: 768px) {
+    padding-right: 0;
+  }
+}
+.mountain_bikes {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  &_list {
+    width: 50%;
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    &_items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 15px;
+        scroll-behavior: smooth;
+        flex-wrap: nowrap;
+      }
+      &_item {
+        padding: 25px 31px;
+        background-color: #34312d;
+        border-radius: 25px;
+        color: white;
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
+        }
+        &_title {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  &_container {
+    width: 50%;
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 20px);
+      margin-right: 20px;
+    }
+    &_image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 25px;
+      display: block;
+      margin-bottom: 25px;
+      @media screen and (max-width: 768px) {
+        margin-top: 25px;
+      }
+    }
+  }
+}

@@ -24,7 +24,6 @@ const Description = () => {
         </div>
       </div>
 
-      {/* Вынесли за пределы ограниченного контейнера */}
       <div className={style.description_block}>
         <img
           className={style.description_block_image}
@@ -34,20 +33,84 @@ const Description = () => {
         <div className={style.description_block_guarantees}>
           <ul className={style.description_block_guarantees_list}>
             <li className={style.description_block_guarantees_list_el}>
-              <img src={icon1} />
-              dfbs
+              <div className={style.description_block_guarantees_list_el_item}>
+                <img
+                  className={
+                    style.description_block_guarantees_list_el_item_icon
+                  }
+                  src={icon1}
+                />
+                <h4
+                  className={
+                    style.description_block_guarantees_list_el_title_title
+                  }
+                >
+                  Европейские бренды
+                </h4>
+              </div>
+              <p className={style.description_block_guarantees_list_el_text}>
+                Представляем десятки европейских брендов
+              </p>
             </li>
             <li className={style.description_block_guarantees_list_el}>
-              <img src={icon2} />
-              fdsbvs
+              <div className={style.description_block_guarantees_list_el_item}>
+                <img
+                  className={
+                    style.description_block_guarantees_list_el_item_icon
+                  }
+                  src={icon2}
+                />
+                <h4
+                  className={
+                    style.description_block_guarantees_list_el_title_title
+                  }
+                >
+                  Вечная гарантия
+                </h4>
+              </div>
+              <p className={style.description_block_guarantees_list_el_text}>
+                На некоторые бренды предоставляем пожизненную гарантию
+              </p>
             </li>
             <li className={style.description_block_guarantees_list_el}>
-              <img src={icon3} />
-              fdsbv
+              <div className={style.description_block_guarantees_list_el_item}>
+                <img
+                  className={
+                    style.description_block_guarantees_list_el_item_icon
+                  }
+                  src={icon3}
+                />
+                <h4
+                  className={
+                    style.description_block_guarantees_list_el_title_title
+                  }
+                >
+                  Предпродажная настройка
+                </h4>
+              </div>
+              <p className={style.description_block_guarantees_list_e_text}>
+                Специалисты настроят ваш велосипед наилучшим образом
+              </p>
             </li>
             <li className={style.description_block_guarantees_list_el}>
-              <img src={icon4} />
-              sdfv
+              <div className={style.description_block_guarantees_list_el_item}>
+                <img
+                  className={
+                    style.description_block_guarantees_list_el_item_icon
+                  }
+                  src={icon4}
+                />
+                <h4
+                  className={
+                    style.description_block_guarantees_list_el_title_title
+                  }
+                >
+                  Доставка за 24 часа
+                </h4>
+              </div>
+              <p className={style.description_block_guarantees_list_el_text}>
+                Доставляем товар всеми популярными транспортными компаниями
+              </p>
             </li>
           </ul>
         </div>
